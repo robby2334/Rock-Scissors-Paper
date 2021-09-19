@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Rock-Scissors-Paper</string>
     <string name="score_human_0_computer_0">Score: Human 0 Computer 0</string>
+    <string name="logo_title">logo title</string>
+    <string name="tittle_player">tittle player</string>
+    <string name="iv_vs">iv vs</string>
+    <string name="iv_info">iv info</string>
+    <string name="iv_title_computer">iv title computer</string>
+    <string name="iv_reset">iv reset</string>
+    <string name="iv_rock">iv rock</string>
+    <string name="iv_scissors">iv scissors</string>
+    <string name="iv_paper">iv paper</string>
+    <string name="iv_com_choice">iv com choice</string>
 </resources>
