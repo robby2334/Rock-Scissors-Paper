@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rock-Scissors-Paper</string>
+    <string name="score_human_0_computer_0">Score: Human 0 Computer 0</string>
+</resources>
