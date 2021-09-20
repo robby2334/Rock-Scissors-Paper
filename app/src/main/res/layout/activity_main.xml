@@ -13,7 +13,8 @@
         android:src="@drawable/tittle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_title" />
 
     <ImageView
         android:id="@+id/iv_title_player"
@@ -21,7 +22,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/player"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_tittle" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
+        android:contentDescription="@string/tittle_player" />
 
     <ImageView
         android:id="@+id/iv_vs"
@@ -30,7 +32,8 @@
         android:src="@drawable/vs"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_tittle" />
+        app:layout_constraintTop_toBottomOf="@id/logo_tittle"
+        android:contentDescription="@string/iv_vs" />
 
 
     <ImageView
@@ -40,7 +43,8 @@
         android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_vs" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_vs"
+        android:contentDescription="@string/iv_info" />
 
     <ImageView
         android:id="@+id/iv_title_com"
@@ -48,7 +52,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/com"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_tittle" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
+        android:contentDescription="@string/iv_title_computer" />
 
     <ImageView
         android:id="@+id/iv_reset"
@@ -59,7 +64,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_score" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_score"
+        android:contentDescription="@string/iv_reset" />
 
 
     <!--    player-->
@@ -92,7 +98,8 @@
         <ImageView
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/rock" />
+            android:src="@drawable/rock"
+            android:contentDescription="@string/iv_rock" />
     </LinearLayout>
 
     <LinearLayout
@@ -109,7 +116,8 @@
         <ImageView
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/scissors" />
+            android:src="@drawable/scissors"
+            android:contentDescription="@string/iv_scissors" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,7 +133,8 @@
         <ImageView
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/paper" />
+            android:src="@drawable/paper"
+            android:contentDescription="@string/iv_paper" />
     </LinearLayout>
 
     <!--    com-->
@@ -139,7 +148,8 @@
         android:orientation="vertical"
         app:layout_constraintLeft_toRightOf="@+id/tv_score"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_title_com" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_com"
+        android:contentDescription="@string/iv_com_choice" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
