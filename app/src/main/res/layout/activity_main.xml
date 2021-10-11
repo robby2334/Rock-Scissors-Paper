@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,8 +28,8 @@
 
     <ImageView
         android:id="@+id/iv_vs"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_width="@dimen/_58sdp"
+        android:layout_height="@dimen/_58sdp"
         android:src="@drawable/vs"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -39,26 +40,18 @@
     <ImageView
         android:id="@+id/iv_info"
         android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="@dimen/_58sdp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/iv_info"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_vs"
-        android:contentDescription="@string/iv_info" />
-
-    <ImageView
-        android:id="@+id/iv_title_com"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/com"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
-        android:contentDescription="@string/iv_title_computer" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_vs" />
 
     <ImageView
         android:id="@+id/iv_reset"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_width="@dimen/_58sdp"
+        android:layout_height="@dimen/_58sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:src="@drawable/refresh"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +61,7 @@
         android:contentDescription="@string/iv_reset" />
 
 
-    <!--    player-->
+    <!--score view-->
 
     <TextView
         android:id="@+id/tv_score"
@@ -85,6 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_info" />
 
+    <!--    player-->
     <LinearLayout
         android:id="@+id/ll_rock_player"
         android:layout_width="wrap_content"
@@ -96,10 +90,10 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_title_player">
 
         <ImageView
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
             android:src="@drawable/rock"
-            android:contentDescription="@string/iv_rock" />
+            android:contentDescription="@string/iv_paper" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,8 +108,8 @@
 
 
         <ImageView
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
             android:src="@drawable/scissors"
             android:contentDescription="@string/iv_scissors" />
     </LinearLayout>
@@ -131,25 +125,76 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_scissors_player">
 
         <ImageView
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
             android:src="@drawable/paper"
             android:contentDescription="@string/iv_paper" />
     </LinearLayout>
 
     <!--    com-->
 
-
     <ImageView
-        android:id="@+id/iv_com_choice"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_80sdp"
-        android:layout_marginTop="@dimen/_78sdp"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toRightOf="@+id/tv_score"
+        android:id="@+id/iv_title_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/com"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_title_com"
-        android:contentDescription="@string/iv_com_choice" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
+        android:contentDescription="@string/iv_title_computer" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_rock_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_com">
+
+        <ImageView
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
+            android:src="@drawable/rock"
+            android:contentDescription="@string/iv_paper" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scissors_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_rock_com">
+
+
+        <ImageView
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
+            android:src="@drawable/scissors"
+            android:contentDescription="@string/iv_scissors" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_paper_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_scissors_com">
+
+        <ImageView
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
+            android:contentDescription="@string/iv_paper"
+            android:src="@drawable/paper" />
+    </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

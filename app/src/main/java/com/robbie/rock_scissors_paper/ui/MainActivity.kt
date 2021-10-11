@@ -24,43 +24,42 @@ open class MainActivity : AppCompatActivity(), Game {
     @SuppressLint("SetTextI18n")
     fun playerElements() {
         binding.llRockPlayer.setOnClickListener {
-            scaleIv(it)
+            scaleIvPlayer(it)
             playGame()
             binding.tvScore.text = "Score Player : $player\nComputer :$computer"
 
         }
         binding.llScissorsPlayer.setOnClickListener {
-            scaleIv(it)
+            scaleIvPlayer(it)
             playGame()
             binding.tvScore.text = "Score Player : $player\nComputer :$computer"
 
         }
         binding.llPaperPlayer.setOnClickListener {
-            scaleIv(it)
+            scaleIvPlayer(it)
             playGame()
             binding.tvScore.text = "Score Player : $player\nComputer :$computer"
 
-        }
 
+        }
         binding.ivReset.setOnClickListener {
-            finish()
-            startActivity((intent))
+            reset()
         }
-
 
     }
 
-    private fun scaleIv(args: Any) {
+
+    private fun scaleIvPlayer(args: Any) {
         when {
-            args === binding.llRockPlayer -> {
+            args === binding.llRockPlayer-> {
                 binding.llRockPlayer.scaleX = "0.85".toFloat()
                 binding.llRockPlayer.scaleY = "0.85".toFloat()
 
                 // Button PAPER and ROCK scale reset
-                binding.llPaperPlayer.scaleX = "1".toFloat()
-                binding.llPaperPlayer.scaleY = "1".toFloat()
-                binding.llScissorsPlayer.scaleX = "1".toFloat()
-                binding.llScissorsPlayer.scaleY = "1".toFloat()
+                binding.llPaperPlayer.scaleX = "1.2".toFloat()
+                binding.llPaperPlayer.scaleY = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleX = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleY = "1.2".toFloat()
 
             }
             args === binding.llPaperPlayer -> {
@@ -68,10 +67,10 @@ open class MainActivity : AppCompatActivity(), Game {
                 binding.llPaperPlayer.scaleY = "0.85".toFloat()
 
                 // Button ROCK and SCISSORS scale reset
-                binding.llRockPlayer.scaleX = "1".toFloat()
-                binding.llRockPlayer.scaleY = "1".toFloat()
-                binding.llScissorsPlayer.scaleX = "1".toFloat()
-                binding.llScissorsPlayer.scaleY = "1".toFloat()
+                binding.llRockPlayer.scaleX = "1.2".toFloat()
+                binding.llRockPlayer.scaleY = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleX = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleY = "1.2".toFloat()
 
             }
             args === binding.llScissorsPlayer -> {
@@ -79,40 +78,91 @@ open class MainActivity : AppCompatActivity(), Game {
                 binding.llScissorsPlayer.scaleY = "0.85".toFloat()
 
                 // Button ROCK and PAPER scale reset
-                binding.llRockPlayer.scaleX = "1".toFloat()
-                binding.llRockPlayer.scaleY = "1".toFloat()
-                binding.llPaperPlayer.scaleX = "1".toFloat()
-                binding.llPaperPlayer.scaleY = "1".toFloat()
+                binding.llRockPlayer.scaleX = "1.2".toFloat()
+                binding.llRockPlayer.scaleY = "1.2".toFloat()
+                binding.llPaperPlayer.scaleX = "1.2".toFloat()
+                binding.llPaperPlayer.scaleY = "1.2".toFloat()
             }
-            else -> resetChoice()
+            else -> resetChoicePlayer()
         }
     }
 
-    private fun resetChoice() {
-        binding.llRockPlayer.scaleX = "1".toFloat()
-        binding.llRockPlayer.scaleY = "1".toFloat()
-        binding.llPaperPlayer.scaleX = "1".toFloat()
-        binding.llPaperPlayer.scaleY = "1".toFloat()
-        binding.llScissorsPlayer.scaleX = "1".toFloat()
-        binding.llScissorsPlayer.scaleY = "1".toFloat()
+    private fun resetChoicePlayer() {
+        binding.llRockPlayer.scaleX = "1.2".toFloat()
+        binding.llRockPlayer.scaleY = "1.2".toFloat()
+        binding.llPaperPlayer.scaleX = "1.2".toFloat()
+        binding.llPaperPlayer.scaleY = "1.2".toFloat()
+        binding.llScissorsPlayer.scaleX = "1.2".toFloat()
+        binding.llScissorsPlayer.scaleY = "1.2".toFloat()
+    }
+
+    private fun scaleIvCom(args: Any) {
+        when {
+            args === binding.llRockCom -> {
+                binding.llRockCom.scaleX = "0.85".toFloat()
+                binding.llRockCom.scaleY = "0.85".toFloat()
+
+                // Button PAPER and ROCK scale reset
+                binding.llPaperCom.scaleX = "1.2".toFloat()
+                binding.llPaperCom.scaleY = "1.2".toFloat()
+                binding.llScissorsCom.scaleX = "1.2".toFloat()
+                binding.llScissorsCom.scaleY = "1.2".toFloat()
+
+            }
+            args === binding.llPaperCom -> {
+                binding.llPaperCom.scaleX = "0.85".toFloat()
+                binding.llPaperCom.scaleY = "0.85".toFloat()
+
+                // Button ROCK and SCISSORS scale reset
+                binding.llRockCom.scaleX = "1.2".toFloat()
+                binding.llRockCom.scaleY = "1.2".toFloat()
+                binding.llScissorsCom.scaleX = "1.2".toFloat()
+                binding.llScissorsCom.scaleY = "1.2".toFloat()
+
+            }
+            args === binding.llScissorsCom -> {
+                binding.llScissorsCom.scaleX = "0.85".toFloat()
+                binding.llScissorsCom.scaleY = "0.85".toFloat()
+
+                // Button ROCK and PAPER scale reset
+                binding.llRockCom.scaleX = "1.2".toFloat()
+                binding.llRockCom.scaleY = "1.2".toFloat()
+                binding.llPaperCom.scaleX = "1.2".toFloat()
+                binding.llPaperCom.scaleY = "1.2".toFloat()
+            }
+            else -> resetChoiceCom()
+        }
+    }
+
+    private fun resetChoiceCom() {
+        binding.llRockCom.scaleX = "1.2".toFloat()
+        binding.llRockCom.scaleY = "1.2".toFloat()
+        binding.llPaperCom.scaleX = "1.2".toFloat()
+        binding.llPaperCom.scaleY = "1.2".toFloat()
+        binding.llScissorsCom.scaleX = "1.2".toFloat()
+        binding.llScissorsCom.scaleY = "1.2".toFloat()
     }
 
     override fun playGame() {
+
         val playerChoice = String()
         val machineCombos = listOf("ROCK", "SCISSORS", "PAPER")
+
         val machineChoseNum = (0..2).random() % 3
         when {
             (machineCombos[machineChoseNum]) === "ROCK" -> {
-                binding.ivComChoice.setImageResource(R.drawable.rock)
+                scaleIvCom(binding.llRockCom)
 
 
             }
             (machineCombos[machineChoseNum]) === "SCISSORS" -> {
-                binding.ivComChoice.setImageResource(R.drawable.scissors)
+                scaleIvCom(binding.llScissorsCom)
+
 
             }
             (machineCombos[machineChoseNum]) === "PAPER" -> {
-                binding.ivComChoice.setImageResource(R.drawable.paper)
+                scaleIvCom(binding.llPaperCom)
+
 
             }
 
@@ -127,11 +177,9 @@ open class MainActivity : AppCompatActivity(), Game {
                     }
                     "PAPER" -> {
                         showResult(0)
-                        player++
                     }
                     else -> {
                         showResult(1)
-                        computer++
 
                     }
                 }
@@ -140,7 +188,6 @@ open class MainActivity : AppCompatActivity(), Game {
                 when (playerChoice) {
                     "ROCK" -> {
                         showResult(1)
-                        computer++
 
                     }
                     "PAPER" -> {
@@ -148,7 +195,6 @@ open class MainActivity : AppCompatActivity(), Game {
                     }
                     else -> {
                         showResult(0)
-                        player++
                     }
                 }
             }
@@ -156,11 +202,9 @@ open class MainActivity : AppCompatActivity(), Game {
                 when (playerChoice) {
                     "ROCK" -> {
                         showResult(0)
-                        player++
                     }
                     "PAPER" -> {
                         showResult(1)
-                        computer++
 
                     }
                     else -> {
@@ -176,16 +220,18 @@ open class MainActivity : AppCompatActivity(), Game {
         when (result) {
             0 -> {
                 binding.ivInfo.setImageResource(R.drawable.p1win)
+                player++
 
 
             }
             1 -> {
-                binding.ivInfo.setImageResource(R.drawable.com_win)
+                binding.ivInfo.setImageResource(R.drawable.draw)
 
 
             }
             2 -> {
-                binding.ivInfo.setImageResource(R.drawable.draw)
+                binding.ivInfo.setImageResource(R.drawable.com_win)
+                computer++
 
 
             }
@@ -194,6 +240,20 @@ open class MainActivity : AppCompatActivity(), Game {
         }
 
     }
+
+    @SuppressLint("SetTextI18n")
+    private fun reset() {
+        player = 0
+        computer = 0
+        binding.tvScore.text = "Score Player : $player\nComputer :$computer"
+        binding.ivInfo.setImageResource(0)
+        playerElements()
+        resetChoicePlayer()
+        resetChoiceCom()
+
+
+    }
+
 
 }
 
